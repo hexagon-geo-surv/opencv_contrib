@@ -63,7 +63,7 @@ void DnnSuperResImpl::readModel(const String& path)
 {
     if ( path.size() )
     {
-        this->net = dnn::readNetFromTensorflow(path, std::string(), dnn::ENGINE_CLASSIC);
+        this->net = dnn::readNetFromTensorflow(path);
         CV_LOG_INFO(NULL, "Successfully loaded model: " << path);
     }
     else
@@ -76,7 +76,7 @@ void DnnSuperResImpl::readModel(const String& weights, const String& definition)
 {
     if ( weights.size() && definition.size() )
     {
-        this->net = dnn::readNetFromTensorflow(weights, definition, dnn::ENGINE_CLASSIC);
+        this->net = dnn::readNetFromTensorflow(weights, definition);
         CV_LOG_INFO(NULL, "Successfully loaded model: " << weights << " " << definition);
     }
     else
