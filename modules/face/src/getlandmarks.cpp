@@ -154,6 +154,9 @@ void FacemarkKazemiImpl :: loadModel(String filename){
                     vector<Point2f> leaf;
                     readLeaf(f,leaf);
                     node.leaf = leaf;
+                    node.split.index1 = 0;
+                    node.split.index2 = 0;
+                    node.split.thresh = 0.f;
                 }
                 else{
                     String error_message = "Data not saved properly.Aborting.....";
