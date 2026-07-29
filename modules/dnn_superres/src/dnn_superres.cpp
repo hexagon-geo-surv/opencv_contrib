@@ -63,7 +63,7 @@ void DnnSuperResImpl::readModel(const String& path)
 {
     if ( path.size() )
     {
-        this->net = dnn::readNetFromTensorflow(path); //engine classic removed
+        this->net = dnn::readNetFromTensorflow(path); // engine classic removed
         CV_LOG_INFO(NULL, "Successfully loaded model: " << path);
     }
     else
